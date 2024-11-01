@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Portfolio</title>
+    <title>My Neon Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 <body>
-    <!-- Floating Side Navigation Bar -->
+    <!-- Fixed Side Navigation Bar -->
     <header>
         <nav class="side-nav">
             <ul>
@@ -21,67 +20,141 @@
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <div class="home-content">
-            <h1>Welcome to My Neon Portfolio</h1>
-            <p>Explore my work and projects in a modern, sleek layout.</p>
-        </div>
-        <div class="illustration">
-            <img src="images/illustration2.jpg" alt="Illustration">
-        </div>
-    </section>
+    <!-- Main Content with Adjusted Margin -->
+    <main>
+        <!-- Home Section with Call-to-Action -->
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1>Welcome to My Neon Portfolio</h1>
+                <p>Bringing Ideas to Life with Cutting-Edge Virtual Reality and Web Development</p>
+<p>With a passion for immersive technology and modern web aesthetics, I transform concepts into unforgettable experiences.</p>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <h2>Portfolio</h2>
-        <div class="portfolio-gallery">
-            <div class="project-item">
-                <h3>Project One</h3>
-                <p>A brief description of Project One with neon glow effects.</p>
+                <button class="cta-button"><a href="#portfolio">Explore My Work</a></button>
             </div>
-            <div class="project-item">
-                <h3>Project Two</h3>
-                <p>A brief description of Project Two with neon glow effects.</p>
+            <div class="illustration">
+                <img src="images/illustration2.jpg" alt="Illustration" class="floating-image">
             </div>
-            <div class="project-item">
-                <h3>Project Three</h3>
-                <p>A brief description of Project Three with neon glow effects.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section with Skills Showcase -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>Hi, I'm [Your Name], a passionate designer and developer creating impactful projects.</p>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <h2>Portfolio</h2>
+            <div class="portfolio-gallery">
+                <div class="project-item" onclick="openModal('vrVideoModal')">
+                    <h3>Virtual Reality Game</h3>
+                    <p>Step into a mystical world where magic comes alive. Built with Unity, this VR experience incorporates complex animations, interactive puzzles, and optimized performance for an immersive journey.</p>
+                </div>
+                <div class="project-item" onclick="openModal('webAppImageModal')">
+                    <h3>Responsive Web Application</h3>
+                    <p>Designed a sleek and user-friendly interface for seamless navigation across devices. Developed using React and styled with dynamic CSS for a visually engaging, fully responsive application.</p>
+                </div>
+            </div>
+            <div class="portfolio-section-cta">
+                <button class="cta-button"><a href="#contact">Let’s Work Together</a></button>
+            </div>
+            
+        </section>
         
-        <!-- Skills Showcase -->
-        <div class="skills-showcase">
-            <div class="skill">
-                <h4>HTML</h4>
-                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill">
-                <h4>CSS</h4>
-                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill">
-                <h4>JavaScript</h4>
-                <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email at [your-email@example.com] or connect on social media.</p>
-    </section>
+        <!-- About Section with Skills Showcase -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>Hi, I'm [Your Name], a passionate designer and developer creating impactful projects that blend technical expertise with creative flair.</p>
+        
+            <!-- Skills Showcase -->
+            <div class="skills-showcase">
+                <div class="skill">
+                    <h4><i class="fas fa-vr-cardboard"></i> Unity (VR Development)</h4>
+                    <p>Creating immersive virtual environments that captivate users, optimized with Unity3D and C# for realistic VR experiences.</p>
+                    <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill">
+                    <h4><i class="fas fa-code"></i> JavaScript & Front-End Frameworks</h4>
+                    <p>Building responsive, user-centric applications with JavaScript, React, and Vue for a dynamic user experience.</p>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill">
+                    <h4><i class="fas fa-paint-brush"></i> Creative CSS & Visual Design</h4>
+                    <p>Designing visually stunning web layouts with CSS and Sass, specializing in neon and minimalist themes.</p>
+                    <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill">
+                    <h4><i class="fas fa-pen-nib"></i> Adobe Illustrator</h4>
+                    <p>Skilled in vector design, creating detailed and creative illustrations that enhance visual projects.</p>
+                    <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill">
+                    <h4><i class="fas fa-image"></i> Adobe Photoshop</h4>
+                    <p>Expertise in photo manipulation, retouching, and creating eye-catching visuals for web and social media.</p>
+                    <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out! I'm open to freelance projects, collaborations, or just a friendly chat about design and development.</p>
+            
+            <!-- Call-to-Action Button -->
+            <button class="cta-button"><a href="mailto:your-email@example.com">Send Me an Email</a></button>
+            
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+        
+    </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 My Neon Portfolio. All rights reserved.</p>
     </footer>
+    <!-- VR Video Modal -->
+<div id="vrVideoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('vrVideoModal')">&times;</span>
+        <video controls>
+            <source src="videos/vr-game-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!-- Web App Image Modal -->
+<div id="webAppImageModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('webAppImageModal')">&times;</span>
+        <img src="images/web-app-demo.jpg" alt="Web App Demo">
+    </div>
+</div>
+
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function(event) {
+        const vrModal = document.getElementById("vrVideoModal");
+        const webAppModal = document.getElementById("webAppImageModal");
+        if (event.target === vrModal) {
+            vrModal.style.display = "none";
+        }
+        if (event.target === webAppModal) {
+            webAppModal.style.display = "none";
+        }
+    }
+</script>
+
 </body>
 </html>
