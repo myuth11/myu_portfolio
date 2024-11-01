@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #F5DFBB; /* Light beige for a clean background */
-    color: #562C2C; /* Dark maroon for text */
+    background-color: #021024; /* Darkest blue */
+    color: #C1E8FF; /* Lightest blue for text */
 }
 
 /* Navigation Bar */
@@ -11,7 +11,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #562C2C; /* Dark maroon */
+    background-color: #052659; /* Deep blue */
     padding: 10px 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -31,41 +31,36 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #F5DFBB; /* Light beige for contrast */
+    color: #C1E8FF; /* Lightest blue for links */
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #F2542D; /* Bright orange for hover effect */
+    color: #7DA0CA; /* Light blue on hover */
 }
 
-/* Section Styles */
-section {
-    padding: 100px 20px; /* Space for scrolling sections */
-    text-align: center;
-}
-
+/* Home Section */
 .home-section {
-    background-color: #F5DFBB; /* Light beige */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: #052659; /* Deep blue */
 }
 
+.illustration img {
+    width: 300px;
+    margin-top: 20px;
+}
+
+/* Portfolio Section */
 .portfolio-section {
-    background-color: #127475; /* Dark teal */
-    color: #F5DFBB;
+    background-color: #021024; /* Darkest blue */
+    color: #C1E8FF;
+    padding: 60px 20px;
 }
 
-.about-section {
-    background-color: #F2542D; /* Bright orange */
-    color: #F5DFBB;
-}
-
-.contact-section {
-    background-color: #0E9594; /* Teal */
-    color: #F5DFBB;
-}
-
-/* Portfolio Gallery */
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -73,12 +68,11 @@ section {
 }
 
 .project-item {
-    background-color: #562C2C; /* Dark maroon */
-    color: #F5DFBB;
+    background-color: #5438B3; /* Medium blue */
+    color: #C1E8FF;
     padding: 20px;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
 }
 
 .project-item:hover {
@@ -86,22 +80,52 @@ section {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* About Section */
+.about-section {
+    background-color: #052659; /* Deep blue */
+    color: #C1E8FF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Skills Showcase */
+.skills-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skill {
+    width: 80%;
+    text-align: left;
+}
+
+.skill-bar {
+    background-color: #021024; /* Darkest blue */
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.skill-level {
+    background-color: #7DA0CA; /* Light blue for skill fill */
+    height: 100%;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #021024; /* Darkest blue */
+    color: #C1E8FF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #562C2C; /* Dark maroon */
-    color: #F5DFBB; /* Light beige */
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul li {
-        margin: 0 10px;
-    }
+    background-color: #052659; /* Deep blue */
+    color: #C1E8FF;
 }
