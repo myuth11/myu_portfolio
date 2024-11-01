@@ -2,9 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    padding-top: 60px; /* Offset for fixed header */
+    background-color: #F5DFBB; /* Light beige for a clean background */
+    color: #562C2C; /* Dark maroon for text */
 }
 
 /* Navigation Bar */
@@ -12,16 +11,17 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #562C2C; /* Dark maroon */
+    padding: 10px 0;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
 }
 
@@ -31,72 +31,72 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ff66b2;
+    color: #F5DFBB; /* Light beige for contrast */
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffffff;
-    border-bottom: 2px solid #ff66b2;
+    color: #F2542D; /* Bright orange for hover effect */
 }
 
 /* Section Styles */
-.hero, .about-section, .portfolio-section, .contact-section {
+section {
+    padding: 100px 20px; /* Space for scrolling sections */
     text-align: center;
-    padding: 60px 20px;
 }
 
-.hero {
-    background: linear-gradient(135deg, #b23c94, #4e004f);
-    color: white;
+.home-section {
+    background-color: #F5DFBB; /* Light beige */
 }
 
+.portfolio-section {
+    background-color: #127475; /* Dark teal */
+    color: #F5DFBB;
+}
+
+.about-section {
+    background-color: #F2542D; /* Bright orange */
+    color: #F5DFBB;
+}
+
+.contact-section {
+    background-color: #0E9594; /* Teal */
+    color: #F5DFBB;
+}
+
+/* Portfolio Gallery */
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.project-item, .about-section, .contact-section {
-    background-color: #282828;
+.project-item {
+    background-color: #562C2C; /* Dark maroon */
+    color: #F5DFBB;
     padding: 20px;
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
-.project-item h3, .about-section h2, .contact-section h2 {
-    color: #ff66b2;
-}
-
-/* Contact Form */
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
-}
-
-.contact-form button {
-    background-color: #ff66b2;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #e055a1;
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1a1a1a;
-    color: #ff66b2;
+    background-color: #562C2C; /* Dark maroon */
+    color: #F5DFBB; /* Light beige */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Responsive Design */
