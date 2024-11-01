@@ -6,15 +6,21 @@ body {
     color: #C1E8FF; /* Lightest blue for text */
 }
 
-/* Navigation Bar */
+/* Modern Navigation Bar */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #052659; /* Deep blue */
+    background: rgba(3, 25, 50, 0.8); /* Dark blue with slight transparency */
+    backdrop-filter: blur(10px); /* Glass effect */
     padding: 10px 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(3, 25, 50, 1); /* Full opacity on hover */
 }
 
 nav ul {
@@ -30,10 +36,17 @@ nav ul li {
 }
 
 nav ul li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #C1E8FF; /* Lightest blue for links */
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
+}
+
+nav ul li a img {
+    width: 20px;
+    margin-right: 8px;
 }
 
 nav ul li a:hover {
@@ -45,13 +58,15 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 20px;
+    padding: 120px 20px; /* Offset for navigation */
     background-color: #052659; /* Deep blue */
+    text-align: center;
 }
 
 .illustration img {
-    width: 300px;
+    width: 300px; /* Adjust as needed */
     margin-top: 20px;
+    border-radius: 10px;
 }
 
 /* Portfolio Section */
