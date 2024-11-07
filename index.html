@@ -11,6 +11,9 @@
     <!-- Fixed Side Navigation Bar -->
     <header>
         <nav class="side-nav">
+            <a href="#home" class="logo-link">
+                <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
+            </a>
             <ul>
                 <li><a href="#home"><span class="icon"><i class="fas fa-home"></i></span><span class="text">Home</span></a></li>
                 <li><a href="#portfolio"><span class="icon"><i class="fas fa-folder-open"></i></span><span class="text">Portfolio</span></a></li>
@@ -25,15 +28,36 @@
         <!-- Home Section with Call-to-Action -->
         <section id="home" class="home-section">
             <div class="home-content">
-                <h1>Welcome to MYU's Portfolio</h1>
+                <h1 style="color:#FFB6C1">Welcome to MYU's Portfolio</h1>
                 <p>Bringing Ideas to Life with Cutting-Edge Virtual Reality and Web Development</p>
 <p>With a passion for immersive technology and modern web aesthetics, I transform concepts into unforgettable experiences.</p>
 
                 <button class="cta-button"><a href="#portfolio">Explore My Work</a></button>
             </div>
-            <div class="illustration">
+            <!-- <div class="illustration">
                 <img src="images/illustration2.jpg" alt="Illustration" class="floating-image">
+            </div> -->
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="images/web-app-demo.jpg" alt="Work 1">
+                        <p class="slide-caption">Project 1: VR Game Environment</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/web-app-demo.jpg" alt="Work 2">
+                        <p class="slide-caption">Project 2: Responsive Web Application</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/web-app-demo.jpg" alt="Work 3">
+                        <p class="slide-caption">Project 3: Creative Illustration Design</p>
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+                <!-- Navigation buttons -->
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
+            
         </section>
 
         <!-- Portfolio Section -->
@@ -59,7 +83,22 @@
         <!-- About Section with Skills Showcase -->
         <section id="about" class="about-section">
             <h2>About Me</h2>
-            <p>Hi, I'm [Your Name], a passionate designer and developer creating impactful projects that blend technical expertise with creative flair.</p>
+            <div class="about-content">
+                <img src="images/my-photo.jpg" alt="My Photo" class="about-photo">
+                <div class="about-description">
+                    <p>
+                        Hi, I'm Myu, a passionate designer and developer who thrives on bringing ideas to life through cutting-edge technology. 
+                        With a solid background in Virtual Reality development and web applications, I aim to create immersive experiences that captivate and engage users.
+                    </p>
+                    <p>
+                        My journey began with a fascination for digital design, which led me to explore various creative tools like Adobe Illustrator and Photoshop.
+                        Over the years, I’ve honed my skills in front-end development, mastering JavaScript, React, and other modern frameworks. 
+                    </p>
+                    <p>
+                        Beyond coding, I enjoy solving complex problems and collaborating with like-minded professionals to push the boundaries of innovation. 
+                        Whether it’s crafting a visually stunning website or developing a VR environment, I’m always eager to learn and evolve.
+                    </p>
+                </div>
         
             <!-- Skills Showcase -->
             <div class="skills-showcase">
@@ -154,6 +193,32 @@
             webAppModal.style.display = "none";
         }
     }
+</script>
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        const offset = -currentSlide * 100; // Move to the next slide by setting offset
+        document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    // Auto-play functionality (optional)
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000); // Change every 5 seconds
 </script>
 
 </body>
