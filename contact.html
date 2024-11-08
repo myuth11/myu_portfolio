@@ -5,37 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <header>
-        <nav>
+        <nav class="side-nav">
+            <a href="index.html" class="logo-link">
+                <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
+            </a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"><span class="icon"><i class="fas fa-home"></i></span><span class="text">Home</span></a></li>
+                <li><a href="portfolio.html"><span class="icon"><i class="fas fa-folder-open"></i></span><span class="text">Portfolio</span></a></li>
+                <li><a href="about.html"><span class="icon"><i class="fas fa-user"></i></span><span class="text">About</span></a></li>
+                <li><a href="contact.html"><span class="icon"><i class="fas fa-phone-alt"></i></span><span class="text">Contact</span></a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Contact Section -->
-    <main>
-        <section class="contact-section">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me via email at [your-email@example.com] or connect with me on LinkedIn.</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+    <!-- Contact Section -->
+<main>
+    <section class="contact-page-section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me via email or connect with me on LinkedIn.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+</main>
+
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Myu. All rights reserved.</p>
     </footer>
 </body>
 </html>

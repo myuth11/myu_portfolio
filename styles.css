@@ -385,3 +385,143 @@ main {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* About Section Styling */
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    color: #C1E8FF;
+}
+
+.about-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-description p {
+    font-size: 1rem;
+    color: #A9CCE3;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Hobbies and Activities Section */
+.hobbies-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.hobbies-section h2 {
+    color: #FFB6C1;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.activities-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.activity {
+    text-align: center;
+}
+
+.activity img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.activity img:hover {
+    transform: scale(1.05);
+}
+
+.activity p {
+    margin-top: 10px;
+    color: #A9CCE3;
+    font-size: 1rem;
+}
+
+
+/* Contact Section Styling */
+.contact-page-section {
+    background: linear-gradient(135deg, #010B18, #07417A); /* Adjusted colors for a unique look */
+    color: #C1E8FF;
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.contact-page-section h2 {
+    color: #FF9DB1;
+    text-shadow: 0 0 10px #FF9DB1, 0 0 20px #FF9DB1;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-page-section .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-page-section .contact-form input,
+.contact-page-section .contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #021024;
+    color: #C1E8FF;
+    font-size: 1rem;
+}
+
+.contact-page-section .contact-form button {
+    padding: 12px 20px;
+    background-color: #FF9DB1;
+    color: #021024;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-page-section .contact-form button:hover {
+    transform: scale(1.05);
+}
+
+.contact-page-section .social-icons {
+    margin-top: 25px;
+}
+
+.contact-page-section .social-icons a {
+    color: #FF9DB1;
+    font-size: 1.8rem;
+    margin: 0 12px;
+    text-shadow: 0 0 5px #FF9DB1, 0 0 10px #FF9DB1;
+    transition: transform 0.3s ease;
+}
+
+.contact-page-section .social-icons a:hover {
+    transform: scale(1.2);
+}

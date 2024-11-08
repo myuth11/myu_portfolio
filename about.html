@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - About</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <header>
-        <nav>
+        <nav class="side-nav">
+            <a href="index.html" class="logo-link">
+                <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
+            </a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"><span class="icon"><i class="fas fa-home"></i></span><span class="text">Home</span></a></li>
+                <li><a href="portfolio.html"><span class="icon"><i class="fas fa-folder-open"></i></span><span class="text">Portfolio</span></a></li>
+                <li><a href="about.html"><span class="icon"><i class="fas fa-user"></i></span><span class="text">About</span></a></li>
+                <li><a href="contact.html"><span class="icon"><i class="fas fa-phone-alt"></i></span><span class="text">Contact</span></a></li>
             </ul>
         </nav>
     </header>
@@ -22,14 +26,52 @@
     <!-- About Section -->
     <main>
         <section class="about-section">
-            <h2>About Me</h2>
-            <p>Hello, I'm [Your Name], a digital designer and developer passionate about creating impactful experiences. I specialize in web design, VR development, and data visualization.</p>
+            <!-- Profile Picture and Introduction -->
+            <div class="about-intro">
+                <img src="images/my-photo.jpg" alt="My Profile Picture" class="profile-picture">
+                <div class="about-description">
+                    <p>
+                        Hi, I'm Myu, a passionate designer and developer who thrives on bringing ideas to life through cutting-edge technology. 
+                        With a background in Virtual Reality development and web applications, I aim to create immersive experiences that captivate and engage users.
+                    </p>
+                    <p>
+                        I’m inspired by the blend of technology and creativity and enjoy exploring tools like Adobe Illustrator, Photoshop, and coding frameworks like JavaScript and React.
+                    </p>
+                    <p>
+                        Beyond work, I love indulging in hobbies like cooking and service learning activities. These activities allow me to see the world from different perspectives, sparking fresh ideas for my digital creations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Hobbies and Activities Section -->
+            <div class="hobbies-section">
+                <h2>My Hobbies & Activities</h2>
+                <p>Here’s a glimpse into my life outside of work. I believe in a balanced lifestyle, mixing creativity with outdoor activities to stay inspired and energized.</p>
+                <div class="activities-gallery">
+                    <div class="activity">
+                        <img src="images/teaching.jpg" alt="Activity 1">
+                        <p>World Vision Project</p>
+                    </div>
+                    <div class="activity">
+                        <img src="images/serviceleaning.jpg" alt="Activity 2">
+                        <p>Service Leaning. Candle making workshop with the elderly</p>
+                    </div>
+                    <div class="activity">
+                        <img src="images/serviceLearning2.jpg" alt="Activity 2">
+                        <p>Service Leaning. Candle making workshop with the elderly</p>
+                    </div>
+                    <div class="activity">
+                        <img src="images/signLanguage.jpg" alt="Activity 2">
+                        <p>Sign Language Club</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Myu. All rights reserved.</p>
     </footer>
 </body>
 </html>
