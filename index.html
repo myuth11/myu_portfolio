@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Fixed Side Navigation Bar -->
     <header>
+        <button class="hamburger-menu" onclick="toggleDashboard()">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav class="side-nav">
-            <a href="#home" class="logo-link">
+            <a href="index.html" class="logo-link">
                 <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
             </a>
             <ul>
@@ -22,6 +24,8 @@
             </ul>
         </nav>
     </header>
+    
+    
 
     <!-- Main Content with Adjusted Margin -->
     <main>
@@ -37,31 +41,14 @@
             <!-- <div class="illustration">
                 <img src="images/illustration2.jpg" alt="Illustration" class="floating-image">
             </div> -->
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide">
-                        <img src="images/web-app-demo.jpg" alt="Work 1">
-                        <p class="slide-caption">Project 1: VR Game Environment</p>
-                    </div>
-                    <div class="slide">
-                        <img src="images/web-app-demo.jpg" alt="Work 2">
-                        <p class="slide-caption">Project 2: Responsive Web Application</p>
-                    </div>
-                    <div class="slide">
-                        <img src="images/web-app-demo.jpg" alt="Work 3">
-                        <p class="slide-caption">Project 3: Creative Illustration Design</p>
-                    </div>
-                    <!-- Add more slides as needed -->
-                </div>
-                <!-- Navigation buttons -->
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="home-logo">
+                <img src="images/MyLogo.svg" alt="My Logo" class="main-logo">
             </div>
             
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio-section">
+        <!-- <section id="portfolio" class="portfolio-section">
             <h2>Portfolio</h2>
             <div class="portfolio-gallery">
                 <div class="project-item" onclick="openModal('vrVideoModal')">
@@ -77,7 +64,7 @@
                 <button class="cta-button"><a href="#contact">Let’s Work Together</a></button>
             </div>
             
-        </section>
+        </section> -->
         
 
         <!-- About Section with Skills Showcase -->
@@ -154,71 +141,17 @@
     <footer>
         <p>&copy; 2024 My Neon Portfolio. All rights reserved.</p>
     </footer>
-    <!-- VR Video Modal -->
-<div id="vrVideoModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('vrVideoModal')">&times;</span>
-        <video controls>
-            <source src="videos/vr-game-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+
 </div>
-
-<!-- Web App Image Modal -->
-<div id="webAppImageModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('webAppImageModal')">&times;</span>
-        <img src="images/web-app-demo.jpg" alt="Web App Demo">
-    </div>
-</div>
-
 <script>
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = 'block';
-    }
+    function toggleDashboard() {
+    const dashboard = document.querySelector('.side-nav');
+    dashboard.classList.toggle('active');
 
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
-    }
+    // Adjust the main content layout
+    document.body.classList.toggle('dashboard-active');
+}
 
-    // Close the modal if the user clicks outside of it
-    window.onclick = function(event) {
-        const vrModal = document.getElementById("vrVideoModal");
-        const webAppModal = document.getElementById("webAppImageModal");
-        if (event.target === vrModal) {
-            vrModal.style.display = "none";
-        }
-        if (event.target === webAppModal) {
-            webAppModal.style.display = "none";
-        }
-    }
-</script>
-
-<script>
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        const slides = document.querySelectorAll('.slide');
-        if (index >= slides.length) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = slides.length - 1;
-        } else {
-            currentSlide = index;
-        }
-        const offset = -currentSlide * 100; // Move to the next slide by setting offset
-        document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-    }
-
-    function changeSlide(direction) {
-        showSlide(currentSlide + direction);
-    }
-
-    // Auto-play functionality (optional)
-    setInterval(() => {
-        changeSlide(1);
-    }, 5000); // Change every 5 seconds
 </script>
 
 </body>

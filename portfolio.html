@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Portfolio</title>
+    <title>My Neon Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Fixed Side Navigation Bar -->
     <header>
+        <button class="hamburger-menu" onclick="toggleDashboard()">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav class="side-nav">
             <a href="index.html" class="logo-link">
                 <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
@@ -23,25 +25,96 @@
             </ul>
         </nav>
     </header>
+    
+    
 
-    <!-- Portfolio Showcase -->
+    <!-- Portfolio Section -->
     <main>
-        <section class="portfolio-section">
-            <h2>My Projects</h2>
+        <section id="portfolio" class="portfolio-section">
+            <h2>Portfolio</h2>
             <div class="portfolio-gallery">
-                <div class="project-item">
-                    <h3>Project One</h3>
-                    <p>Short description of Project One.</p>
+                <div class="card" onclick="scrollToDetails('vrGameDetails')">
+                    <img src="images/vr-game.jpg" alt="VR Game Cover" class="card-image">
+                    <h3>Virtual Reality Game</h3>
+                    <p>Step into a mystical world with interactive puzzles and animations.</p>
                 </div>
-                <div class="project-item">
-                    <h3>Project Two</h3>
-                    <p>Short description of Project Two.</p>
+                <div class="card" onclick="scrollToDetails('webAppDetails')">
+                    <img src="images/web-app.jpg" alt="Web App Cover" class="card-image">
+                    <h3>Responsive Web App</h3>
+                    <p>Seamless and user-friendly navigation across devices.</p>
                 </div>
-                <div class="project-item">
-                    <h3>Project Three</h3>
-                    <p>Short description of Project Three.</p>
+                <div class="card" onclick="scrollToDetails('illustrationDetails')">
+                    <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
+                    <h3>Creative Illustration</h3>
+                    <p>A collection of detailed and artistic designs.</p>
                 </div>
-                <!-- Add more project items as needed -->
+            </div>
+            <div id="portfolio-details">
+                <div id="vrGameDetails" class="details">
+                    <h3>Virtual Reality Game</h3>
+                    <p class="intro-text">Step into a mystical world with magical elements and interactive gameplay designed using Unity. Solve puzzles, explore magical artifacts, and bake a legendary cookie in this enchanting VR escape room adventure.</p>
+                    
+                    <div class="vr-game-summary">
+                        <h4>The Enchanted Forest Magician’s Retreat</h4>
+                        <ul>
+                            <li><strong>Software:</strong> Unity</li>
+                            <li><strong>Language:</strong> C#</li>
+                        </ul>
+                        <h5>Inspiration</h5>
+                        <p>This VR escape room draws inspiration from Studio Ghibli films like <em>Kiki’s Delivery Service</em> and <em>Spirited Away</em>, and the magical intrigue of <em>Harry Potter</em>'s Diagon Alley.</p>
+                        
+                        <h5>Overview</h5>
+                        <p>Players become a magician living in a cozy forest retreat, blending magic and baking. Discover enchanting ingredients, spellbinding recipes, and magical artifacts in a rustic and mystical setting.</p>
+                        
+                        <h5>Objective</h5>
+                        <p>Explore the retreat, solve puzzles, and use magical ingredients to bake a legendary cookie, unlocking secrets to escape the retreat.</p>
+                        
+                        <h5>Aesthetic</h5>
+                        <p>The retreat combines rustic warmth with mystical allure, featuring hand-crafted details, warm colors, and a storybook charm.</p>
+                    </div>
+                
+                    <h4>Gallery</h4>
+                    <div class="vr-game-gallery">
+                        <div class="scene">
+                            <img src="images/VRGame1.png" alt="VR Game Scene 1">
+                            <p>Scene 1: The magical cottage</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/VRGame2.png" alt="VR Game Scene 2">
+                            <p>Scene 2: The enchanting kitchen</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/VRGame3.png" alt="VR Game Scene 3">
+                            <p>Scene 3: The potion-making station</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/VRGame4.png" alt="VR Game Scene 4">
+                            <p>Scene 4: The spellbinding library</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Storyboard and Gameplay</h4>
+                    <img src="images/storyboard.png" alt="Storyboard of the VR Game">
+                    <p>The storyboard outlining the gameplay journey.</p>
+                    <img src="images/gameplayscoop.jpg" alt="Gameplay Scope">
+                    <p>An overview of the gameplay scope.</p>
+                    
+                    <h4>VR Game Demo</h4>
+                    <video src="videos/vr-game-demo.mp4" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Watch a short demo of the VR game.</p>
+                </div>
+                
+                
+                <div id="webAppDetails" class="details">
+                    <h3>Responsive Web App</h3>
+                    <p>Built using React, this application provides a modern and user-friendly experience for all devices.</p>
+                </div>
+                <div id="illustrationDetails" class="details">
+                    <h3>Creative Illustration</h3>
+                    <p>An artistic journey showcasing a variety of illustration styles, tools, and mediums.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -50,5 +123,35 @@
     <footer>
         <p>&copy; 2024 Myu. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function scrollToDetails(detailId) {
+            // Hide all details initially
+            const allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
+
+            // Show the selected detail
+            const detailElement = document.getElementById(detailId);
+            detailElement.style.display = 'block';
+
+            // Scroll to the details section
+            const detailsContainer = document.getElementById('portfolio-details');
+            detailsContainer.style.display = 'block';
+            detailsContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        function toggleDashboard() {
+    const dashboard = document.querySelector('.side-nav');
+    dashboard.classList.toggle('active');
+
+    // Adjust the main content layout
+    document.body.classList.toggle('dashboard-active');
+}
+
+    </script>
 </body>
 </html>

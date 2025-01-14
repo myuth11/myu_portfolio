@@ -10,6 +10,9 @@
 <body>
     <!-- Navigation Bar -->
     <header>
+        <button class="hamburger-menu" onclick="toggleDashboard()">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav class="side-nav">
             <a href="index.html" class="logo-link">
                 <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
@@ -22,6 +25,8 @@
             </ul>
         </nav>
     </header>
+    
+    
 
     <!-- About Section -->
     <main>
@@ -68,6 +73,17 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function toggleDashboard() {
+    const dashboard = document.querySelector('.side-nav');
+    dashboard.classList.toggle('active');
+
+    // Adjust the main content layout
+    document.body.classList.toggle('dashboard-active');
+}
+
+    </script>
 
     <!-- Footer -->
     <footer>
