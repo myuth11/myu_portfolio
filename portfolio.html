@@ -104,6 +104,15 @@
                         Your browser does not support the video tag.
                     </video>
                     <p>Watch a short demo of the VR game.</p>
+                    <h4>Downloads</h4>
+                    <div class="downloads">
+                        <p><strong>Download the Android APK:</strong></p>
+                        <a href="https://drive.google.com/file/d/1meWfIw7ulAVRg1GshocSvsMysQ4rjK8T/view?usp=sharing" download class="download-link">Download APK</a>
+                        
+                        <p><strong>Access the Game Design Document (GDD):</strong></p>
+                        <a href="https://drive.google.com/file/d/1QI-LVVCmMvZXdjS6Vn5QZRuHGaofChZ7/view?usp=sharing" target="_blank" class="download-link">View GDD on Google Drive</a>
+                    </div>
+                    <button id="refoldButton" class="cta-button" onclick="refoldDetails()">Back</button>
                 </div>
                 
                 
@@ -150,6 +159,16 @@
 
     // Adjust the main content layout
     document.body.classList.toggle('dashboard-active');
+}
+
+    </script>
+    <script>
+        function refoldDetails() {
+    const detailsSection = document.getElementById('vrGameDetails');
+    detailsSection.style.display = 'none'; // Hide the details section
+
+    // Scroll back to the top of the portfolio section
+    document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
 }
 
     </script>
