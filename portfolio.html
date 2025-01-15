@@ -43,10 +43,15 @@
                     <h3>Responsive Web App</h3>
                     <p>Seamless and user-friendly navigation across devices.</p>
                 </div>
-                <div class="card" onclick="scrollToDetails('illustrationDetails')">
+                <div class="card" onclick="scrollToDetails('stickerPackDetails')">
                     <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
                     <h3>Creative Illustration</h3>
                     <p>A collection of detailed and artistic designs.</p>
+                </div>
+                <div class="card" onclick="scrollToDetails('menuBotDetails')">
+                    <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
+                    <h3>UX Design Prototype</h3>
+                    <p>Menu Bot app.</p>
                 </div>
             </div>
             <div id="portfolio-details">
@@ -117,13 +122,190 @@
                 
                 
                 <div id="webAppDetails" class="details">
-                    <h3>Responsive Web App</h3>
-                    <p>Built using React, this application provides a modern and user-friendly experience for all devices.</p>
+                    <h3>Recipe Organizer Web App</h3>
+                    <p>
+                        This Recipe Organizer is more than just an app; it’s a journey into enhancing how we cook and organize our kitchen adventures. 
+                        Developed using <strong>JSX</strong>, <strong>JavaScript</strong>, and <strong>Node.js</strong>, the app offers seamless recipe management,
+                        meal planning, and a community for sharing.
+                    </p>
+                    <p>
+                        From concept to creation, I wanted to craft an intuitive and engaging experience for home cooks. I focused on user needs like meal planning
+                        and ingredient management to make everyday cooking more enjoyable.
+                    </p>
+                
+                    <div class="vr-game-gallery">
+                        <div class="scene">
+                            <img src="images/recipe-home.jpg" alt="Recipe App Home Screen">
+                            <p>Home Screen: Explore a user-friendly dashboard with all your recipes at a glance.</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/featured-recipes.jpg" alt="Recipe App Home Screen with Featured Recipes">
+                            <p>The featured recipes on the home screen</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/recipe-list.jpg" alt="Recipe List Screen">
+                            <p>Recipe List: Effortlessly view, search, and filter recipes from your collection.</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/add-recipe.jpg" alt="Add Recipe Screen">
+                            <p>Add Recipe: Quickly input and save recipes with all necessary details and photos.</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/search-function.jpg" alt="Search Function Screen">
+                            <p>Search Function: Find exactly what you need with a powerful and intuitive search tool.</p>
+                        </div>
+                    </div>
+                
+                    <div class="downloads">
+                        <p>Download the APK of the Recipe Organizer App or check out the Google Drive for more resources:</p>
+                        <a href="files/recipe-organizer.apk" class="download-link">Download Android APK</a>
+                        <a href="https://drive.google.com/your-gdd-file" target="_blank" class="download-link">View GDD on Google Drive</a>
+                    </div>
+                
+                    <button id="refoldButton" class="cta-button" onclick="refoldDetails()">Back</button>
                 </div>
+                <div id="menuBotDetails" class="details">
+                    <h3>MenuBot App</h3>
+                    <p>
+                        <strong>Product Goal:</strong> To enhance the dining experience by providing an interactive real-time digital menu that empowers users with detailed dish information, personalized recommendations, and seamless ordering, improving satisfaction, transparency, and efficiency for both diners and restaurants.
+                    </p>
+                    <div class="menuBot-summary">
+                        <h4>App Description</h4>
+                        <p>
+                            MenuBot is a real-time digital menu app that enhances dining experiences by offering detailed dish descriptions, allergen info, and personalized AI recommendations. The app integrates with POS systems, supports real-time updates, and provides multilingual support. Additionally, it includes customer feedback features, reducing the need for printed menus and promoting a smarter, sustainable dining experience.
+                        </p>
+                    </div>
+                
+                    <!-- Wireframes Section -->
+                    <div class="menuBot-wireframes">
+                        <h4>Low-Fi Wireframes</h4>
+                        <div class="scene">
+                            <img src="images/lowfi.jpg" alt="MenuBot Low-Fi Wireframe 1">
+                            <p>Low-Fi Wireframe: Restaurant Listing Page</p>
+                        </div>
+                        
+                    </div>
+                
+                    <!-- Hi-Fi Designs Section -->
+                    <div class="menuBot-hifi">
+                        <h4>Hi-Fi Designs</h4>
+                        <div class="scene">
+                            <img src="images/1stPage.jpg" alt="MenuBot Hi-Fi Design 1">
+                            <p>Hi-Fi Design: Home Page</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/2ndPage.jpg" alt="MenuBot Hi-Fi Design 2">
+                            <p>Hi-Fi Design: Restaurant Details Page</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/3rdPage.jpg" alt="MenuBot Hi-Fi Design 3">
+                            <p>Hi-Fi Design: CheckOut</p>
+                        </div>
+                    </div>
+                
+                    <!-- Key Features Section -->
+                    <div class="menuBot-features">
+                        <h4>Key Features & Functionalities</h4>
+                        <ul>
+                            <li>Interactive real-time menu with detailed dish descriptions and allergen information.</li>
+                            <li>AI-powered personalized recommendations.</li>
+                            <li>POS system integration and real-time updates.</li>
+                            <li>Multilingual support and customer feedback functionality.</li>
+                            <li>Eco-friendly approach reducing printed menu usage.</li>
+                        </ul>
+                    </div>
+                
+                    <!-- Triggers, Animations, and Variables Section -->
+                    <div class="menuBot-interactions">
+                        <h4>Triggers, Animations, and Variables</h4>
+                        <p><strong>Logo Hover Effect:</strong> On hover, the logo scales up to increase visibility.</p>
+                        <p><strong>Food Ordering Mode:</strong> Toggle between Delivery and Pick-Up modes with a smooth sliding animation.</p>
+                        <p><strong>Add to Cart Interaction:</strong> Adding an item triggers a popup message that fades in and out.</p>
+                        <p><strong>Variables:</strong> Track the quantity of items (e.g., CarbonaraCount, VongoleCount) with conditional logic to prevent negative values.</p>
+                    </div>
+                
+                    <!-- Link to Wireframes -->
+                    <div class="menuBot-links">
+                        <h4>Interactive Prototype</h4>
+                        <p>Explore the <a href="https://www.figma.com/design/2neoF9bR7LZxjyoysC3jyI/L06MenuBotApp-Auto-layout-Hi-fi?node-id=1-5&t=R48lzXdqPFDsR7R8-1" target="_blank" class="interactive-link">MenuBot Prototype on Figma</a>.</p>
+                        <p>Watch the demo at <a href="https://youtube.com/shorts/XzbwzimXDaU">Demo On youtube</a>.</p>
+                    </div>
+                
+                    <!-- Refold Button -->
+                    <button id="refoldButton" class="cta-button" onclick="refoldDetails()">Back</button>
+                </div>
+                
+                <div id="stickerPackDetails" class="details">
+                    <h3>Sticker Pack Design</h3>
+                    <p>
+                        <strong>Objective:</strong> To create a warm and inviting visual that instantly engages viewers and gives a friendly face to the brand.
+                    </p>
+                    <p>
+                        <strong>Purpose:</strong> A friendly character can make the brand more relatable and approachable, encouraging potential clients to feel at ease when engaging with the brand.
+                    </p>
+                
+                    <!-- Design Concept Section -->
+                    <div class="sticker-concept">
+                        <h4>Character Design</h4>
+                        <p>
+                            The pink dog character is designed to be cute and approachable. The addition of a blue bow and scarf adds a touch of personality, making the character more memorable and visually appealing. Bright yellow text contrasts sharply with the blue accessories and pink character, ensuring the greeting is prominent and engaging.
+                        </p>
+                        <p>
+                            The black hair and nose provide contrast within the character, adding depth and visual interest. The repetition of colors—blue in the bow and scarf, and yellow in the text—creates harmony and reinforces the brand’s color palette.
+                        </p>
+                    </div>
+                
+                    <!-- Sketches Section -->
+                    <div class="sticker-sketches">
+                        <h4>Sketches</h4>
+                        <div class="scene">
+                            <img src="images/sketch-sticker.jpg" alt="Sticker Sketch 1">
+                            <p>Initial character sketches exploring expressions and poses.</p>
+                        </div>
+                        
+                    </div>
+                
+                    <!-- Final Designs Section -->
+                    <div class="sticker-final">
+                        <h4>Final Sticker Designs</h4>
+                        <div class="scene">
+                            <img src="images/sticker-pack1.jpg" alt="Sticker Final Design 1">
+                            <p>The pink dog character with a welcoming wave.</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/sticker-pack2.jpg" alt="Sticker Final Design 2">
+                            <p>The character expressing happiness with bright yellow text.</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/sticker-pack3.jpg" alt="Sticker Final Design 3">
+                            <p>A playful pose with a scarf flowing in the wind.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Key Highlights -->
+                    <div class="sticker-highlights">
+                        <h4>Key Design Highlights</h4>
+                        <ul>
+                            <li>Bright and approachable character design to enhance relatability.</li>
+                            <li>Contrasting colors (pink, blue, yellow) for visual harmony and branding.</li>
+                            <li>Personality expressed through accessories like the blue bow and scarf.</li>
+                            <li>Simple and inviting expressions for universal appeal.</li>
+                        </ul>
+                    </div>
+                    <p><strong>Access the stcker Pack design document:</strong></p>
+                        <a href="https://drive.google.com/file/d/1fXCRADPO9auTcMTg5Lzh-GL-ogf3pjC7/view?usp=sharing" target="_blank" class="download-link">View GDD on Google Drive</a>
+
+                
+                    <!-- Refold Button -->
+                    <button id="refoldButton" class="cta-button" onclick="refoldDetails()">Back</button>
+                </div>
+                
+                
                 <div id="illustrationDetails" class="details">
                     <h3>Creative Illustration</h3>
                     <p>An artistic journey showcasing a variety of illustration styles, tools, and mediums.</p>
                 </div>
+
             </div>
         </section>
     </main>
@@ -164,12 +346,20 @@
     </script>
     <script>
         function refoldDetails() {
-    const detailsSection = document.getElementById('vrGameDetails');
-    detailsSection.style.display = 'none'; // Hide the details section
+    // Hide all details sections
+    const allDetails = document.querySelectorAll('.details');
+    allDetails.forEach(detail => {
+        detail.style.display = 'none';
+    });
 
-    // Scroll back to the top of the portfolio section
+    // Hide the portfolio details container
+    const detailsContainer = document.getElementById('portfolio-details');
+    detailsContainer.style.display = 'none';
+
+    // Scroll back to the portfolio section
     document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
 }
+
 
     </script>
 </body>
