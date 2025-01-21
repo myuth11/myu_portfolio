@@ -32,20 +32,21 @@
         <!-- Home Section with Call-to-Action -->
         <section id="home" class="home-section">
             <div class="home-content">
-                <h1 style="color:#FFB6C1">Welcome to MYU's Portfolio</h1>
-                <p>Bringing Ideas to Life with Cutting-Edge Virtual Reality and Web Development</p>
-<p>With a passion for immersive technology and modern web aesthetics, I transform concepts into unforgettable experiences.</p>
-
-                <button class="cta-button"><a href="#portfolio">Explore My Work</a></button>
+                <h1 class="animate-text">Welcome to MYU's Portfolio</h1>
+                <p class="animate-text">Bringing Ideas to Life with Cutting-Edge Virtual Reality and Web Development</p>
+                <p class="animate-text">With a passion for immersive technology and modern web aesthetics, I transform concepts into unforgettable experiences.</p>
+                <button class="cta-button animate-button"><a href="#portfolio">Explore My Work</a></button>
             </div>
-            <!-- <div class="illustration">
-                <img src="images/illustration2.jpg" alt="Illustration" class="floating-image">
-            </div> -->
             <div class="home-logo">
                 <img src="images/MyLogo.svg" alt="My Logo" class="main-logo">
             </div>
-            
+            <!-- Background Image -->
+            <img src="images/hero_img.png" alt="Background Design" class="background-image">
         </section>
+        
+        
+        
+        
 
         <!-- Portfolio Section -->
         <!-- <section id="portfolio" class="portfolio-section">
@@ -152,6 +153,24 @@
     document.body.classList.toggle('dashboard-active');
 }
 
+</script>
+<script>
+// Scroll-Based Animation Logic
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-text, .animate-button, .main-logo");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+        });
+    }, { threshold: 0.1 }); // Adjust threshold to trigger earlier or later
+
+    elements.forEach((el) => observer.observe(el));
+});
 </script>
 
 </body>

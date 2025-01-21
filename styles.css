@@ -67,7 +67,7 @@ main {
 
 /* Home Section */
 .home-section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
     color: #C1E8FF;
     background: linear-gradient(135deg, #021024, #0E59A4);
@@ -954,3 +954,82 @@ video {
     transform: scale(1.1);
 }
 
+/* Hero Section Background Image */
+/* Hero Section */
+/* Home Section */
+/* General Section Styling */
+.home-section {
+    position: relative;
+    text-align: center;
+    color: #C1E8FF;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #021024, #0E59A4);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Text Animations */
+.animate-text {
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Move slightly down */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth animation */
+}
+
+.animate-text.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+    
+}
+
+/* Button Animation */
+.animate-button {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease 0.5s, transform 1s ease 0.5s; /* Delayed animation */
+}
+
+.animate-button.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Logo Animation */
+.main-logo {
+    width: 150px;
+    height: auto;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.8); /* Slightly smaller */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.main-logo.show {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Original size */
+}
+
+/* Background Image Animation */
+.background-image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(30%, -50%);
+    width: 40%;
+    opacity: 0.2;
+    z-index: 1;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite; /* Add floating animation */
+}
+
+/* Floating Keyframes */
+@keyframes float {
+    0%, 100% {
+        transform: translate(30%, -50%);
+    }
+    50% {
+        transform: translate(30%, -55%);
+    }
+}
