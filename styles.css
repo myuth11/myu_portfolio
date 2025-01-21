@@ -66,18 +66,7 @@ main {
 }
 
 /* Home Section */
-.home-section {
-    padding: 80px 20px;
-    text-align: center;
-    color: #C1E8FF;
-    background: linear-gradient(135deg, #021024, #0E59A4);
-}
 
-.home-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px #7DA0CA, 0 0 20px #7DA0CA;
-}
 
 .cta-button {
     margin-top: 20px;
