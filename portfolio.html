@@ -38,27 +38,27 @@
             <h2>Portfolio</h2>
             <div class="portfolio-gallery">
                 <div class="card" onclick="scrollToDetails('vrGameDetails')">
-                    <img src="images/vr-game.jpg" alt="VR Game Cover" class="card-image">
+                    <!-- <img src="images/vr-game.jpg" alt="VR Game Cover" class="card-image"> -->
                     <h3>Virtual Reality Game</h3>
                     <p>Step into a mystical world with interactive puzzles and animations.</p>
                 </div>
                 <div class="card" onclick="scrollToDetails('webAppDetails')">
-                    <img src="images/web-app.jpg" alt="Web App Cover" class="card-image">
+                    <!-- <img src="images/web-app.jpg" alt="Web App Cover" class="card-image"> -->
                     <h3>Responsive Web App</h3>
                     <p>Seamless and user-friendly navigation across devices.</p>
                 </div>
                 <div class="card" onclick="scrollToDetails('stickerPackDetails')">
-                    <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
+                    <!-- <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image"> -->
                     <h3>Creative Illustration</h3>
                     <p>A collection of detailed and artistic designs.</p>
                 </div>
                 <div class="card" onclick="scrollToDetails('menuBotDetails')">
-                    <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
+                    <!-- <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image"> -->
                     <h3>UX Design Prototype</h3>
                     <p>Menu Bot app.</p>
                 </div>
-                <div class="card" onclick="scrollToDetails('catAppDetails')">
-                    <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
+                <div class="card" onclick="scrollToDetails('catBreedsAppDetails')">
+                    <!-- <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image"> -->
                     <h3>Cat App Prototype</h3>
                     <p>Cat app.</p>
                 </div>
@@ -289,6 +289,11 @@
                             <img src="images/sticker-pack3.jpg" alt="Sticker Final Design 3">
                             <p>A playful pose with a scarf flowing in the wind.</p>
                         </div>
+
+                        <div >
+                            <img  src="images/stickerusage.jpg" alt="Sticker Used in Whatsapp">
+                            <p>The sticker pack can be used in messages.</p>
+                        </div>
                     </div>
                 
                     <!-- Key Highlights -->
@@ -307,15 +312,72 @@
                 
                     <!-- Refold Button -->
                     <button id="refoldButton" class="cta-button" onclick="refoldDetails()">Back</button>
-                </div>
                 
-                
-                <div id="illustrationDetails" class="details">
-                    <h3>Creative Illustration</h3>
-                    <p>An artistic journey showcasing a variety of illustration styles, tools, and mediums.</p>
                 </div>
-
-            </div>
+                <div id="catBreedsAppDetails" class="details">
+                    <h3>Cat Breeds App</h3>
+                    <p>
+                        <strong>Objective:</strong> To create a user-friendly application that displays detailed information about various cat breeds in a visually appealing and dynamic format.
+                    </p>
+                    <p>
+                        <strong>Purpose:</strong> The app is designed for cat enthusiasts who want to explore and learn about different breeds. It provides an engaging platform that combines information, usability, and design to create an enjoyable user experience.
+                    </p>
+                
+                    <!-- Features Section -->
+                    <div class="app-features">
+                        <h4>Features</h4>
+                        <p>
+                            This app offers three main features:
+                        </p>
+                        <ul>
+                            <li>Displays a list of cat breeds with key details such as breed name, origin, origin location, and coat type.</li>
+                            <li>Includes a dynamic search bar that allows users to filter the breeds in real-time by typing keywords related to the breed name, origin, or coat type.</li>
+                            <li>Features a custom cat logo for branding and utilizes dynamic colors and coat type icons for enhanced visual engagement.</li>
+                        </ul>
+                    </div>
+                
+                    <!-- How It Works Section -->
+                    <div class="app-how-it-works">
+                        <h4>How It Works</h4>
+                        <p>
+                            When the app starts, it fetches cat breed data from an online API and displays it using React Native's <strong>FlatList</strong>, which ensures efficient rendering of the list. The search bar dynamically listens for user input and updates the list in real-time by filtering the data.
+                        </p>
+                        <p>
+                            Additionally, the app includes sorting functionality that allows users to organize the list alphabetically, by origin, or by coat type. Each breed is displayed in a card format with dynamic background colors and coat type icons, making it visually distinctive and easy to navigate. The responsive design is achieved using Flexbox and styled with React Native's StyleSheet.
+                        </p>
+                    </div>
+                
+                    <!-- Demo Section -->
+                    <div class="app-demo">
+                        <h4>Demo</h4>
+                        <div class="scene">
+                            <img src="images/catImage.png" alt="Cat Breeds App Home Screen" class="mobile-photo">
+                            <p>The app's home screen displaying a list of cat breeds with details like breed name, origin, and coat type.</p>
+                        </div>
+                        <div class="scene">
+                            <img src="images/CatAppDemo.png" alt="Cat Breeds App Details Screen">
+                            <p>A detailed view of a selected breed, featuring dynamic icons and background colors for better visual appeal.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Key Highlights -->
+                    <div class="app-highlights">
+                        <h4>Key Highlights</h4>
+                        <ul>
+                            <li>Efficient rendering using React Native's <strong>FlatList</strong> for large data sets.</li>
+                            <li>Dynamic filtering and sorting functionalities for a seamless user experience.</li>
+                            <li>Visually engaging design with custom icons, dynamic background colors, and branding elements.</li>
+                            <li>Responsive layout powered by Flexbox and styled using React Native's StyleSheet.</li>
+                        </ul>
+                    </div>
+                    <p>Watch the demo at <a href="https://youtu.be/GBVtuMGY_Ww">Demo On youtube</a>.</p>
+                    <p><strong>Access the Cat Breeds App Repository Link:</strong></p>
+                        <a href="https://github.com/myuth11/C346L10Exercise2.git" target="_blank" class="download-link">View on Github</a>
+                
+                    <!-- Refold Button -->
+                    <button id="refoldButton" class="cta-button" onclick="refoldDetails()">Back</button>
+                </div>
+                    
         </section>
     </main>
 

@@ -1,11 +1,5 @@
 /* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #021024;
-    color: #C1E8FF;
-    overflow-x: hidden;
-}
+
 
 /* Fixed Side Navigation */
 .side-nav {
@@ -596,7 +590,7 @@ body.dashboard-active main {
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     background-color: #021024;
     color: #C1E8FF;
@@ -1038,3 +1032,109 @@ video {
 .logo:hover {
     transform: scale(1.1); /* Slight zoom on hover */
 }
+
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: #021024;
+    color: #C1E8FF;
+    overflow-x: hidden;
+}
+
+/* Side Navigation */
+.side-nav ul li a {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Main Content Adjustments to Avoid Overlap */
+main {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+    font-family: 'Lato', sans-serif;
+}
+
+.about-description p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+/* Skills Showcase */
+.skills-showcase .skill h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+}
+
+.skills-showcase .skill p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+/* Contact Section */
+.contact-section h2,
+.contact-section .cta-button a {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Slider Container */
+.slider {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Portfolio Section */
+.portfolio-section h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Header Container */
+.header-container {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Footer */
+footer {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Modal Content */
+.modal-content {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Default Font */
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+
+.mobile-photo {
+    width: 30%; /* Make the photo responsive */
+    max-width: 2px; /* Smaller maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Slightly rounded corners */
+    margin: 5px auto; /* Center the photo and add minimal spacing */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.mobile-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
