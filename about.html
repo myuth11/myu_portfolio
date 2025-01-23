@@ -10,13 +10,18 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <button class="hamburger-menu" onclick="toggleDashboard()">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="side-nav">
+        <div class="header-container">
+            <!-- Hamburger menu on the left -->
+            <button class="hamburger-menu" onclick="toggleDashboard()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Logo links to the index page -->
             <a href="index.html" class="logo-link">
-                <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
+                <img src="images/MyLogo.svg" alt="My Logo" class="logo">
             </a>
+        </div>
+        <nav class="side-nav">
+            
             <ul>
                 <li><a href="index.html"><span class="icon"><i class="fas fa-home"></i></span><span class="text">Home</span></a></li>
                 <li><a href="portfolio.html"><span class="icon"><i class="fas fa-folder-open"></i></span><span class="text">Portfolio</span></a></li>

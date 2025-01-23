@@ -529,38 +529,7 @@ main {
     margin-top: 20px;
 }
 
-.card {
-    background-color: #052659;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #7DA0CA, 0 0 30px #7DA0CA;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    color: #FFB6C1;
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.card p {
-    font-size: 0.9rem;
-    color: #A9CCE3;
-}
 
 #portfolio-details {
     margin-top: 50px;
@@ -658,8 +627,8 @@ body {
 .side-nav {
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden */
-    width: 250px;
+    left: -200px; /* Adjust width to match */
+    width: 200px; /* Reduced width */
     height: 100%;
     background-color: rgba(2, 16, 36, 0.9);
     transition: left 0.3s ease; /* Smooth transition */
@@ -674,17 +643,8 @@ body {
     left: 0; /* Show the nav when active */
 }
 
-/* Logo Styling */
-.logo-link {
-    margin-bottom: 20px;
-}
 
-.logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+
 
 /* Navigation Links */
 .side-nav ul {
@@ -1021,4 +981,60 @@ video {
     50% {
         transform: translate(30%, -55%);
     }
+}
+/* Header Container */
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust height */
+    background-color: rgba(2, 16, 36, 0.7); /* Reduced alpha for more transparency */
+    z-index: 1000;
+    padding: 0 20px; /* Horizontal padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow */
+}
+
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    background-color: transparent;
+    border: none;
+    color: #C1E8FF;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 15px; /* Add space between the menu and logo */
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.hamburger-menu i {
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1);
+}
+
+/* Logo Link Styling */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Logo Styling */
+.logo {
+    margin: 0 10px; /* Use margin instead of padding for spacing */
+    height: 40px; /* Keep height manageable */
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }

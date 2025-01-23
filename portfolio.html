@@ -10,13 +10,17 @@
 <body>
     <!-- Fixed Side Navigation Bar -->
     <header>
-        <button class="hamburger-menu" onclick="toggleDashboard()">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="side-nav">
+        <div class="header-container">
+            <!-- Hamburger menu on the left -->
+            <button class="hamburger-menu" onclick="toggleDashboard()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Logo links to the index page -->
             <a href="index.html" class="logo-link">
-                <img src="images/MyLogo.jpg" alt="My Logo" class="logo">
+                <img src="images/MyLogo.svg" alt="My Logo" class="logo">
             </a>
+        </div>
+        <nav class="side-nav">
             <ul>
                 <li><a href="index.html"><span class="icon"><i class="fas fa-home"></i></span><span class="text">Home</span></a></li>
                 <li><a href="portfolio.html"><span class="icon"><i class="fas fa-folder-open"></i></span><span class="text">Portfolio</span></a></li>
@@ -52,6 +56,11 @@
                     <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
                     <h3>UX Design Prototype</h3>
                     <p>Menu Bot app.</p>
+                </div>
+                <div class="card" onclick="scrollToDetails('catAppDetails')">
+                    <img src="images/illustration.jpg" alt="Illustration Cover" class="card-image">
+                    <h3>Cat App Prototype</h3>
+                    <p>Cat app.</p>
                 </div>
             </div>
             <div id="portfolio-details">
