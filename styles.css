@@ -534,7 +534,7 @@ main {
 
 .details {
     margin-top: 20px;
-    background-color: #052659;
+    background-color: #021024;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -712,7 +712,7 @@ body.dashboard-active main {
 
 /* Portfolio Cards */
 .card {
-    background-color: #052659;
+    
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -777,7 +777,7 @@ footer {
 
 
 .details {
-    background-color: #052659;
+    
     color: #C1E8FF;
     padding: 20px;
     margin: 20px auto;
@@ -842,7 +842,7 @@ video {
 }
 
 .details {
-    background-color: #052659;
+    
     color: #C1E8FF;
     padding: 20px;
     margin: 20px auto;
