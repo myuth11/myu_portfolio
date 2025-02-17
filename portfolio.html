@@ -550,6 +550,7 @@
                     <!-- Refold Button -->
                     <button id="refoldButton" class="cta-button" onclick="refoldDetails()">Back</button>
                 </div>
+                
             </div>                
                   
                 
@@ -567,17 +568,17 @@
     <!-- JavaScript -->
     <script>
         function scrollToDetails(detailId) {
-            // Hide all details initially
+            
             const allDetails = document.querySelectorAll('.details');
             allDetails.forEach(detail => {
                 detail.style.display = 'none';
             });
 
-            // Show the selected detail
+            
             const detailElement = document.getElementById(detailId);
             detailElement.style.display = 'block';
 
-            // Scroll to the details section
+            
             const detailsContainer = document.getElementById('portfolio-details');
             detailsContainer.style.display = 'block';
             detailsContainer.scrollIntoView({ behavior: 'smooth' });
@@ -588,24 +589,24 @@
     const dashboard = document.querySelector('.side-nav');
     dashboard.classList.toggle('active');
 
-    // Adjust the main content layout
+    
     document.body.classList.toggle('dashboard-active');
 }
 
     </script>
     <script>
         function refoldDetails() {
-    // Hide all details sections
+    
     const allDetails = document.querySelectorAll('.details');
     allDetails.forEach(detail => {
         detail.style.display = 'none';
     });
 
-    // Hide the portfolio details container
+    
     const detailsContainer = document.getElementById('portfolio-details');
     detailsContainer.style.display = 'none';
 
-    // Scroll back to the portfolio section
+    
     document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
 }
 
