@@ -24,31 +24,24 @@
         </div>
         <nav class="side-nav">
             <ul>
-                <li><a href="index.html"><span class="icon"><i class="fas fa-home"></i></span><span
-                            class="text">Home</span></a></li>
-                <li><a href="portfolio.html"><span class="icon"><i class="fas fa-folder-open"></i></span><span
-                            class="text">Portfolio</span></a></li>
-                <li><a href="about.html"><span class="icon"><i class="fas fa-user"></i></span><span
-                            class="text">About</span></a></li>
-                <li><a href="contact.html"><span class="icon"><i class="fas fa-phone-alt"></i></span><span
-                            class="text">Contact</span></a></li>
+                <li><a href="index.html"><span class="icon"><i class="fas fa-home"></i></span><span class="text">Home</span></a></li>
+                <li><a href="portfolio.html"><span class="icon"><i class="fas fa-folder-open"></i></span><span class="text">Portfolio</span></a></li>
+                <li><a href="about.html"><span class="icon"><i class="fas fa-user"></i></span><span class="text">About</span></a></li>
+                <li><a href="contact.html"><span class="icon"><i class="fas fa-phone-alt"></i></span><span class="text">Contact</span></a></li>
             </ul>
         </nav>
     </header>
 
-
-
-    <!-- Contact Section -->
     <!-- Contact Section -->
     <main>
         <section class="contact-page-section">
             <h2>Contact Me</h2>
             <p>Feel free to reach out to me via email or connect with me on LinkedIn.</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+            <form class="contact-form" name="contact-form">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" placeholder="Your Message" required></textarea>
+                <button type="submit" id="submit">Send Message</button>
             </form>
             <!-- Social Media Icons -->
             <div class="social-icons">
@@ -58,43 +51,35 @@
             </div>
         </section>
     </main>
+
     <script>
         function toggleDashboard() {
             const dashboard = document.querySelector('.side-nav');
             dashboard.classList.toggle('active');
-
-            // Adjust the main content layout
             document.body.classList.toggle('dashboard-active');
         }
 
-    </script>
-    <script>
-        document.querySelector(".contact-form").addEventListener("submit", function (event) {
+        const scriptURL = "https://script.google.com/macros/s/AKfycbyMrMJQigZa0DCetL6U7CmRoAlVndIpJkelh-yEfeoWYGDiW84kDdQHqFulprGX04G_iA/exec"; // Replace with your Google Apps Script Web App URL
+        const form = document.forms["contact-form"];
+
+        form.addEventListener("submit", function (event) {
             event.preventDefault();
 
-            const formData = {
-                name: document.querySelector("input[type='text']").value,
-                email: document.querySelector("input[type='email']").value,
-                message: document.querySelector("textarea").value
-            };
+            const formData = new FormData(form);
 
-            fetch("https://script.google.com/macros/s/AKfycbwxDE7kl-W4t-IM6lRTk6jy7xaDJwo9MwAzXxeAXdNkvxFUDlsFO-GaD-obs4yd_nXL5Q/exec", {
-                method: "POST",
-                body: JSON.stringify(formData),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
+            fetch(scriptURL, { method: "POST", body: formData })
                 .then(response => response.json())
                 .then(data => {
-                    alert(data.message);
-                    document.querySelector(".contact-form").reset();
+                    if (data.result === "success") {
+                        alert("Thank you! Your message has been sent.");
+                        form.reset();
+                    } else {
+                        alert("Error: " + data.error);
+                    }
                 })
-                .catch(error => console.error("Error:", error));
+                .catch(error => console.error("Error!", error.message));
         });
-
     </script>
-
 
     <!-- Footer -->
     <footer>

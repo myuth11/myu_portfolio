@@ -376,6 +376,8 @@ main {
     margin: auto;
     text-align: center;
     color: #C1E8FF;
+    animation: fadeIn 1.5s ease-out;
+
 }
 
 .about-intro {
@@ -514,6 +516,7 @@ main {
     background-color: #021024;
     color: #C1E8FF;
     text-align: center;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .portfolio-gallery {

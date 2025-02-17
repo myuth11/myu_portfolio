@@ -155,13 +155,13 @@
     const dashboard = document.querySelector('.side-nav');
     dashboard.classList.toggle('active');
 
-    // Adjust the main content layout
+    
     document.body.classList.toggle('dashboard-active');
 }
 
 </script>
 <script>
-// Scroll-Based Animation Logic
+
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".animate-text, .animate-button, .main-logo");
 
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 entry.target.classList.remove("show");
             }
         });
-    }, { threshold: 0.1 }); // Adjust threshold to trigger earlier or later
+    }, { threshold: 0.1 }); // 
 
     elements.forEach((el) => observer.observe(el));
 });
