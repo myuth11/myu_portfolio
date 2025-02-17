@@ -446,7 +446,7 @@ main {
 
 /* Contact Section Styling */
 .contact-page-section {
-    background: linear-gradient(135deg, #010B18, #07417A); /* Adjusted colors for a unique look */
+    background: linear-gradient(135deg, #010B18, #07417A); 
     color: #C1E8FF;
     padding: 100px 20px;
     text-align: center;
@@ -1095,7 +1095,7 @@ main {
 /* Portfolio Section */
 .portfolio-section h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .card p {
@@ -1138,3 +1138,11 @@ footer {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+.portfolio-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFB6C1;
+    border-bottom: 3px solid #FFB6C1;
+    padding-bottom: 5px;
+    display: inline-block;
+}
